@@ -155,10 +155,10 @@ void loop() {
 
   
 
-  if(max(dataDiterima.suhu1, dataDiterima.suhu2) > 32 && max(dataDiterima.suhu1, dataDiterima.suhu2) != 0){
+  if(max(dataDiterima.suhu1, dataDiterima.suhu2) > 37 && max(dataDiterima.suhu1, dataDiterima.suhu2) != 0){
     digitalWrite(FanPin, LOW);
     doc["fanStatus"] = "ON";
-  }else if(max(dataDiterima.suhu1, dataDiterima.suhu2) <= 29){
+  }else if(max(dataDiterima.suhu1, dataDiterima.suhu2) <= 37){
     digitalWrite(FanPin, HIGH);
     doc["fanStatus"] = "OFF";
   }else{
